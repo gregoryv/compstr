@@ -2,7 +2,6 @@ package compstr
 
 import (
 	"fmt"
-	"testing"
 )
 
 func Example_format() {
@@ -13,20 +12,6 @@ func Example_format() {
 	// [Serve HTTP]
 	// [Call RPC Method]
 	// [Example Car Model]
-}
-
-func BenchmarkSplit(b *testing.B) {
-	in := "CallRPCHandler"
-	for i := 0; i < b.N; i++ {
-		_ = Split(in)
-	}
-}
-func BenchmarkAppendWords(b *testing.B) {
-	in := "CallRPCHandler"
-	compstr := make([]string, 0, 3)
-	for i := 0; i < b.N; i++ {
-		_ = AppendWords(compstr, in)
-	}
 }
 
 func ExampleSplit() {
