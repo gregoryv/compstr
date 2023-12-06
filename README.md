@@ -1,4 +1,4 @@
-compstr - Provides means to split compound words
+[compstr](https://pkg.go.dev/github.com/gregoryv/compstr) - Provides means to split compound words
 
 A compounded word is made of two or more words merged together.
 Compound format is described at [Go initialisms](
