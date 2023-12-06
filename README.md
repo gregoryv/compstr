@@ -5,6 +5,10 @@ Compound format is described at [Go initialisms](
 https://github.com/golang/go/wiki/CodeReviewComments#initialisms
 ).
 
+The primary use case is to efficiently split a string like
+callRPCHandler into the words [call RPC Handler] during static Go
+source code analysis.
+
 This module is optimized for words comprised of characters
 [a-zA-Z0-9_].
 
