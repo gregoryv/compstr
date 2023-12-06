@@ -1,5 +1,13 @@
 compstr - Provides means to split compound words
 
+A compounded word is made of two or more words merged together.
+Compound format is described at [Go initialisms](
+https://github.com/golang/go/wiki/CodeReviewComments#initialisms
+).
+
+This module is optimized for words comprised of characters
+[a-zA-Z0-9_].
+
 ## Benchmark
 
     goos: linux
