@@ -1,4 +1,4 @@
-[compstr](https://pkg.go.dev/github.com/gregoryv/compstr) - Provides means to split compound words
+[strmix](https://pkg.go.dev/github.com/gregoryv/strmix) - Provides means to split compound words
 
 A compounded word is made of two or more words merged together.
 Compound format is described at [Go initialisms](
@@ -16,7 +16,7 @@ This module is optimized for words comprised of characters
 
     goos: linux
     goarch: amd64
-    pkg: compstr
+    pkg: strmix
     cpu: Intel(R) Xeon(R) E-2288G CPU @ 3.70GHz
     Benchmark_compstr
     Benchmark_compstr-16              16188284       140.70 ns/op     112 B/op       1 allocs/op

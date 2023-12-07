@@ -1,4 +1,4 @@
-package compstr
+package strmix
 
 import (
 	"testing"
@@ -19,8 +19,8 @@ func bench(b *testing.B, split func(string) []string) {
 
 func BenchmarkAppendWords(b *testing.B) {
 	in := "CallRPCHandler"
-	compstr := make([]string, 0, 3)
+	strmix := make([]string, 0, 3)
 	for i := 0; i < b.N; i++ {
-		_ = AppendWords(compstr, in)
+		_ = AppendWords(strmix, in)
 	}
 }

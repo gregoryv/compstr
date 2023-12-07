@@ -1,10 +1,10 @@
-// Package compstr provides split functions for compounded words.
+// Package strmix provides split functions for compounded words.
 //
 // A compounded word is made of two or more words merged together.
 // Compound format is described at [Go initialisms].
 //
 // [Go initialisms]: https://github.com/golang/go/wiki/CodeReviewComments#initialisms
-package compstr
+package strmix
 
 // Split returns all non empty words from the given ASCII input.
 func Split(s string) []string {
