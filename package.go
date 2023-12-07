@@ -18,7 +18,7 @@ func AppendWords(dst []string, s string) []string {
 	var from int
 	for i := 1; i < len(s); i++ {
 		switch {
-		case s[i] == '_':
+		case isSeparator(s[i]):
 			if i > from {
 				dst = append(dst, s[from:i])
 			}
@@ -28,12 +28,16 @@ func AppendWords(dst []string, s string) []string {
 			dst = append(dst, s[from:i])
 			from = i
 
-		case i-from > 2 && isUpper(s[i-1]) && isLower(s[i]):
+		case i-from >= 2 && isUpper(s[i-1]) && isLower(s[i]):
 			dst = append(dst, s[from:i-1])
 			from = i - 1
 		}
 	}
 	return append(dst, s[from:])
+}
+
+func isSeparator(b byte) bool {
+	return b == '_' || b == ' ' || b == '.'
 }
 
 func isLower(b byte) bool { return b >= 'a' && b <= 'z' }

@@ -3,6 +3,10 @@
 This project adheres to semantic versioning and all major changes will
 be noted in this file.
 
+## [0.3.0] 2023-12-07
+
+- Use ' ' and '.' as separators
+
 ## [0.2.0] 2023-12-07
 
 - Rename package to strmix
