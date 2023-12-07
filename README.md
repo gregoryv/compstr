@@ -18,9 +18,11 @@ This module is optimized for words comprised of characters
     goarch: amd64
     pkg: github.com/gregoryv/strmix
     cpu: Intel(R) Xeon(R) E-2288G CPU @ 3.70GHz
-    BenchmarkSplit_strmix-16          15030070    119.70 ns/op     112 B/op       1 allocs/op
-    BenchmarkSplit_camelcase-16        1237680    937.60 ns/op     488 B/op      24 allocs/op
-    BenchmarkAppendWords_strmix-16    48409911     21.00 ns/op       0 B/op       0 allocs/op
+    BenchmarkSplit_strmix
+    BenchmarkSplit_strmix-16          17144353       109.6 ns/op     112 B/op       1 allocs/op
+    BenchmarkSplit_camelcase-16        1138200       994.4 ns/op     488 B/op      24 allocs/op
+    BenchmarkUSplit_strmix-16         10438047       153.3 ns/op     112 B/op       1 allocs/op
+    BenchmarkAppendWords_strmix-16    58247101        20.5 ns/op       0 B/op       0 allocs/op
 
 
 ## Related modules

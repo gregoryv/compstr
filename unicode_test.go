@@ -6,35 +6,19 @@ import (
 	"testing"
 )
 
-func Example_format() {
-	fmt.Println(Split("ServeHTTP"))
-	fmt.Println(Split("CallRPCMethod"))
-	fmt.Println(Split("ExampleCar_Model"))
+func Example_unicodeSplit() {
+	fmt.Println(USplit("ÖstraÅkern"))
+	fmt.Println(USplit("1976_årskurs"))
+	fmt.Println(USplit("lilla.örnenFlög"))
+	fmt.Println(USplit("XYZÖken"))
 	// output:
-	// [Serve HTTP]
-	// [Call RPC Method]
-	// [Example Car Model]
+	// [Östra Åkern]
+	// [1976 årskurs]
+	// [lilla örnen Flög]
+	// [XYZ Öken]
 }
 
-func ExampleSplit() {
-	fmt.Println(Split("CallRPCHandler_nowOrLater"))
-	fmt.Println(Split("H20Chemical"))
-	fmt.Println(Split("hiddenField"))
-	fmt.Println(Split("word"))
-	fmt.Println(Split("ab__cd"))
-	fmt.Println(Split("1_2_3A"))
-	fmt.Println(Split("http.ResponseWriter"))
-	// output:
-	// [Call RPC Handler now Or Later]
-	// [H20 Chemical]
-	// [hidden Field]
-	// [word]
-	// [ab cd]
-	// [1 2 3A]
-	// [http Response Writer]
-}
-
-func TestSplit(t *testing.T) {
+func TestUSplit(t *testing.T) {
 	cases := []struct {
 		in  string
 		exp []string

@@ -2,14 +2,15 @@ package strmix
 
 import (
 	"testing"
-	//"github.com/fatih/camelcase"
+
+	"github.com/fatih/camelcase"
 )
 
 const in = "CallRPCHandler"
 
-func BenchmarkSplit_strmix(b *testing.B) { bench(b, Split) }
-
-//func BenchmarkSplit_camelcase(b *testing.B)    { bench(b, camelcase.Split) }
+func BenchmarkSplit_strmix(b *testing.B)    { bench(b, Split) }
+func BenchmarkSplit_camelcase(b *testing.B) { bench(b, camelcase.Split) }
+func BenchmarkUSplit_strmix(b *testing.B)   { bench(b, USplit) }
 
 func bench(b *testing.B, split func(string) []string) {
 	for i := 0; i < b.N; i++ {
