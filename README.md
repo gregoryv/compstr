@@ -19,11 +19,11 @@ This module is optimized for words comprised of characters
     pkg: github.com/gregoryv/strmix
     cpu: Intel(R) Xeon(R) E-2288G CPU @ 3.70GHz
     BenchmarkSplit_strmix
-    BenchmarkSplit_strmix-16          17144353       109.6 ns/op     112 B/op       1 allocs/op
-    BenchmarkSplit_camelcase-16        1138200       994.4 ns/op     488 B/op      24 allocs/op
-    BenchmarkUSplit_strmix-16         10438047       153.3 ns/op     112 B/op       1 allocs/op
-    BenchmarkAppendWords_strmix-16    58247101        20.5 ns/op       0 B/op       0 allocs/op
-
+    BenchmarkSplit_strmix-16       16483531       105.20 ns/op     112 B/op       1 allocs/op
+    BenchmarkSplit_camelcase-16     1233808       967.80 ns/op     488 B/op      24 allocs/op
+    BenchmarkUSplit_strmix-16       6354415       199.50 ns/op     112 B/op       1 allocs/op
+    BenchmarkAppendWords-16        51060759        20.92 ns/op       0 B/op       0 allocs/op
+    BenchmarkUAppendWords-16       22820806        52.30 ns/op       0 B/op       0 allocs/op
 
 ## Related modules
 

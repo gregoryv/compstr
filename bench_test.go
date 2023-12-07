@@ -18,10 +18,12 @@ func bench(b *testing.B, split func(string) []string) {
 	}
 }
 
-func BenchmarkAppendWords_strmix(b *testing.B) {
-	in := "CallRPCHandler"
-	strmix := make([]string, 0, 3)
+func BenchmarkAppendWords(b *testing.B)  { benchAppend(b, AppendWords) }
+func BenchmarkUAppendWords(b *testing.B) { benchAppend(b, UAppendWords) }
+
+func benchAppend(b *testing.B, appendFunc func([]string, string) []string) {
+	buf := make([]string, 0, 3)
 	for i := 0; i < b.N; i++ {
-		_ = AppendWords(strmix, in)
+		_ = appendFunc(buf, in)
 	}
 }
