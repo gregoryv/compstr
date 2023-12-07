@@ -2,14 +2,14 @@ package strmix
 
 import (
 	"testing"
-	// "github.com/fatih/camelcase"
+	//"github.com/fatih/camelcase"
 )
 
 const in = "CallRPCHandler"
 
-func Benchmark_compstr(b *testing.B) { bench(b, Split) }
+func BenchmarkSplit_strmix(b *testing.B) { bench(b, Split) }
 
-//func Benchmark_camelcase(b *testing.B)    { bench(b, camelcase.Split) }
+//func BenchmarkSplit_camelcase(b *testing.B)    { bench(b, camelcase.Split) }
 
 func bench(b *testing.B, split func(string) []string) {
 	for i := 0; i < b.N; i++ {
@@ -17,7 +17,7 @@ func bench(b *testing.B, split func(string) []string) {
 	}
 }
 
-func BenchmarkAppendWords(b *testing.B) {
+func BenchmarkAppendWords_strmix(b *testing.B) {
 	in := "CallRPCHandler"
 	strmix := make([]string, 0, 3)
 	for i := 0; i < b.N; i++ {

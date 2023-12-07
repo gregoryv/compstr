@@ -16,12 +16,11 @@ This module is optimized for words comprised of characters
 
     goos: linux
     goarch: amd64
-    pkg: strmix
+    pkg: github.com/gregoryv/strmix
     cpu: Intel(R) Xeon(R) E-2288G CPU @ 3.70GHz
-    Benchmark_compstr
-    Benchmark_compstr-16              16188284       140.70 ns/op     112 B/op       1 allocs/op
-    Benchmark_camelcase-16             1367502      1007.00 ns/op     488 B/op      24 allocs/op
-    BenchmarkAppendWords-16           36377338        27.94 ns/op       0 B/op       0 allocs/op
+    BenchmarkSplit_strmix-16          15030070    119.70 ns/op     112 B/op       1 allocs/op
+    BenchmarkSplit_camelcase-16        1237680    937.60 ns/op     488 B/op      24 allocs/op
+    BenchmarkAppendWords_strmix-16    48409911     21.00 ns/op       0 B/op       0 allocs/op
 
 
 ## Related modules
